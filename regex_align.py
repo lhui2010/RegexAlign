@@ -25,7 +25,6 @@ ref_fa_len = {}
 sys.stderr.write("Reversing Ref fasta sequences..\n")
 for ref_id in ref_dict:
     ref_dict_reverse[ref_id] = ref_dict[ref_id].seq.reverse_complement()
-    print (ref_dict_reverse[ref_id] )
     ref_fa_len[ref_id] = len(ref_dict[ref_id].seq)
 
 for qry_id in qry_dict.keys():
