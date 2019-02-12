@@ -12,14 +12,9 @@ RegexAlign used re.search to find exact start and end position of query sequence
 ### Usage
 python regex_align.py query.fasta reference.fasta >align.bed
 
-## Format
-
-###Input
-[Fasta](https://en.wikipedia.org/wiki/FASTA_format)
-
-### Output
-[Bed](https://genome.ucsc.edu/FAQ/FAQformat.html)
-
+### Format
+* Input: [Fasta](https://en.wikipedia.org/wiki/FASTA_format)
+* Output: [Bed](https://genome.ucsc.edu/FAQ/FAQformat.html)
 
 ## TODO
 Add multiple-thread mode
