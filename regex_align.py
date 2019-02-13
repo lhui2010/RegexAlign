@@ -43,8 +43,9 @@ for qry_id in qry_dict.keys():
                 strand = '-'
                 rev_start = ref_fa_len[ref_id] - result.start()
                 rev_end = ref_fa_len[ref_id] - result.end() + 1
-                result_line= "\t".join([qry_id,ref_id,str(rev_start),
-                    str(rev_end), ".",strand])
-        print_buf += result_line + "\n"
+                result_line= "\t".join([ref_id,str(rev_end),
+                    str(rev_start), qry_id,".",strand])
+        if(result_line != ""):
+            print_buf += result_line + "\n"
 print(print_buf, end ='')
 
