@@ -34,8 +34,8 @@ for qry_id in qry_dict.keys():
         result=re.search(qry_dict[qry_id].seq.__str__(), ref_dict[ref_id].seq.__str__())
         if(result != None):
             strand = '+'
-            result_line= "\t".join([qry_id,ref_id,str(result.start()+1),
-                str(result.end()), ".",strand])
+            result_line= "\t".join([ref_id,str(result.start()+1),
+                str(result.end()), qry_id,".",strand])
         else:
             result=re.search(qry_dict[qry_id].seq.__str__(), 
                 ref_dict_reverse[ref_id].__str__())
